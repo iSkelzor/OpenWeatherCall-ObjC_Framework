@@ -16,9 +16,13 @@
                      unixTimestamp:(long)unixTimestamp
                        AndLocation:(CLLocation*)location;
 
+-(instancetype)initWithTemperature:(double)temperature
+                       description:(NSString*)description
+                       AndLocation:(CLLocation*)location;
+
 @property (readonly) double temperature;
 @property (nonatomic, readonly, copy) NSString* description;
 @property (readonly) long unixTimestamp;
-@property (nonatomic, readonly, copy) NSString* location;
+@property (nonatomic, readonly, copy) CLLocation* location;
 
 @end

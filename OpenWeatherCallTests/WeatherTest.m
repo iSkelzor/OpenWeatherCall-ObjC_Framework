@@ -1,6 +1,6 @@
 //
-//  WeatherTest.m
-//  OpenWeatherCall
+//  OpenWeatherCallTests.m
+//  OpenWeatherCallTests
 //
 //  Created by Arbeit on 06.03.15.
 //  Copyright (c) 2015 Andreas Braatz. All rights reserved.
@@ -16,27 +16,79 @@
 @end
 
 @implementation WeatherTest
-
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+{
+    Weather* TestWeather;
 }
 
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
+-(void)tearDown
+{
+    TestWeather = nil;
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+-(void)testInit
+{
+    TestWeather = [[Weather alloc] init];
+    XCTAssertNotNil(TestWeather);
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+-(void)testFullInitialisation
+{
+    CLLocation* TestLocation = [self getCLLocationObject];
+    
+    TestWeather = [[Weather alloc] initWithTemperature:10
+                                           description:@"rain"
+                                         unixTimestamp:123456789
+                                           AndLocation:TestLocation
+                   ];
+    
+    XCTAssertNotNil(TestWeather);
+    XCTAssertEqual(10, TestWeather.temperature);
+    XCTAssertEqualObjects(@"rain", TestWeather.description);
+    XCTAssertEqual(123456789, TestWeather.unixTimestamp);
+    XCTAssertEqualObjects(TestLocation, TestWeather.location);
+}
+
+-(void)testInitialisationWithoutUnixtime
+{
+    CLLocation* TestLocation = [self getCLLocationObject];
+    
+    TestWeather = [[Weather alloc] initWithTemperature:10
+                                           description:@"rain"
+                                           AndLocation:TestLocation
+                   ];
+    
+    long unixTime = [[NSDate date] timeIntervalSince1970];
+    XCTAssertTrue(abs(unixTime - TestWeather.unixTimestamp) <= 10);
+    
+    XCTAssertEqual(10, TestWeather.temperature);
+    XCTAssertEqualObjects(@"rain", TestWeather.description);
+    XCTAssertEqualObjects(TestLocation, TestWeather.location);
+}
+
+-(void)testAttributePersistency
+{
+    NSString* TestDescription = [NSString stringWithFormat:@"DescTest"];
+    CLLocation* TestLocation = [self getCLLocationObject];
+    
+    TestWeather = [[Weather alloc] initWithTemperature:10
+                                           description:TestDescription
+                                         unixTimestamp:123456789
+                                           AndLocation:TestLocation
+                   ];
+    
+    NSString* TestDescriptionNew = TestDescription;
+    CLLocation* TestLocationNew = TestLocation;
+    
+    TestDescription = nil;
+    TestLocation = nil;
+    
+    XCTAssertEqualObjects(TestWeather.description, TestDescriptionNew);
+    XCTAssertEqualObjects(TestWeather.location, TestLocationNew);
+}
+                                
+-(CLLocation*)getCLLocationObject
+{
+    return [[CLLocation alloc] initWithLatitude:51.34 longitude:12.37];
 }
 
 @end
