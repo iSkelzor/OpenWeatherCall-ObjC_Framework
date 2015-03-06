@@ -12,6 +12,8 @@
 		8256CAFB1AA99594002297D7 /* OpenWeatherCallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8256CAFA1AA99594002297D7 /* OpenWeatherCallTests.m */; };
 		8256CB061AA99A0B002297D7 /* Weather.h in Headers */ = {isa = PBXBuildFile; fileRef = 8256CB041AA99A0B002297D7 /* Weather.h */; };
 		8256CB071AA99A0B002297D7 /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 8256CB051AA99A0B002297D7 /* Weather.m */; };
+		8256CB091AA99B13002297D7 /* WeatherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8256CB081AA99B13002297D7 /* WeatherTest.m */; };
+		8256CB0A1AA99B13002297D7 /* WeatherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8256CB081AA99B13002297D7 /* WeatherTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,7 @@
 		8256CAFA1AA99594002297D7 /* OpenWeatherCallTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenWeatherCallTests.m; sourceTree = "<group>"; };
 		8256CB041AA99A0B002297D7 /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weather.h; sourceTree = "<group>"; };
 		8256CB051AA99A0B002297D7 /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
+		8256CB081AA99B13002297D7 /* WeatherTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,7 @@
 		8256CAF71AA99594002297D7 /* OpenWeatherCallTests */ = {
 			isa = PBXGroup;
 			children = (
+				8256CB081AA99B13002297D7 /* WeatherTest.m */,
 				8256CAFA1AA99594002297D7 /* OpenWeatherCallTests.m */,
 				8256CAF81AA99594002297D7 /* Supporting Files */,
 			);
@@ -216,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8256CB091AA99B13002297D7 /* WeatherTest.m in Sources */,
 				8256CB071AA99A0B002297D7 /* Weather.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8256CB0A1AA99B13002297D7 /* WeatherTest.m in Sources */,
 				8256CAFB1AA99594002297D7 /* OpenWeatherCallTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
