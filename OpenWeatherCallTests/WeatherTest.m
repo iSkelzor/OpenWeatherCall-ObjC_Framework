@@ -58,7 +58,7 @@
                    ];
     
     long unixTime = [[NSDate date] timeIntervalSince1970];
-    XCTAssertTrue(abs(unixTime - TestWeather.unixTimestamp) <= 10);
+    XCTAssertEqualWithAccuracy(unixTime, TestWeather.unixTimestamp, 10);
     
     XCTAssertEqual(10, TestWeather.temperature);
     XCTAssertEqualObjects(@"rain", TestWeather.weatherDescription);
