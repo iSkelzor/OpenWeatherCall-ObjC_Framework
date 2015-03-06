@@ -43,7 +43,7 @@
     
     XCTAssertNotNil(TestWeather);
     XCTAssertEqual(10, TestWeather.temperature);
-    XCTAssertEqualObjects(@"rain", TestWeather.description);
+    XCTAssertEqualObjects(@"rain", TestWeather.weatherDescription);
     XCTAssertEqual(123456789, TestWeather.unixTimestamp);
     XCTAssertEqualObjects(TestLocation, TestWeather.location);
 }
@@ -61,7 +61,7 @@
     XCTAssertTrue(abs(unixTime - TestWeather.unixTimestamp) <= 10);
     
     XCTAssertEqual(10, TestWeather.temperature);
-    XCTAssertEqualObjects(@"rain", TestWeather.description);
+    XCTAssertEqualObjects(@"rain", TestWeather.weatherDescription);
     XCTAssertEqualObjects(TestLocation, TestWeather.location);
 }
 
@@ -82,7 +82,7 @@
     TestDescription = nil;
     TestLocation = nil;
     
-    XCTAssertEqualObjects(TestWeather.description, TestDescriptionNew);
+    XCTAssertEqualObjects(TestWeather.weatherDescription, TestDescriptionNew);
     XCTAssertEqualObjects(TestWeather.location, TestLocationNew);
 }
                                 

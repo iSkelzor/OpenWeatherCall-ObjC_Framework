@@ -21,7 +21,7 @@
                        AndLocation:(CLLocation*)location;
 
 @property (readonly) double temperature;
-@property (nonatomic, readonly, copy) NSString* description;
+@property (nonatomic, readonly, copy) NSString* weatherDescription;
 @property (readonly) long unixTimestamp;
 @property (nonatomic, readonly, copy) CLLocation* location;
 
