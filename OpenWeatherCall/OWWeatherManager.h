@@ -13,7 +13,7 @@
 
 -(instancetype)initWithOpenWeatherID:(NSString*)OpenWeatherID;
 
--(Weather*)getActualWeatherWithLocation:(CLLocation*)Location AndError:(NSError*)error;
+-(Weather*)getActualWeatherWithLocation:(CLLocation*)Location AndError:(NSError**)error;
 
 -(NSArray*)getHistoricWeatherWithLocation:(CLLocation*)Location
                             Unixstarttime:(long)start

@@ -40,7 +40,7 @@
     
     NSError* error;
     TestWeather = [TestWeatherManager getActualWeatherWithLocation:[self getCLLocationObject]
-                                                          AndError:error];
+                                                          AndError:&error];
     
     XCTAssertTrue([error.domain isEqualToString:@"OWGettingWeatherError"]);
     XCTAssertEqual(error.code, 1);
@@ -56,7 +56,7 @@
     
     NSError* error;
     TestWeather = [TestWeatherManager getActualWeatherWithLocation:[self getCLLocationObject]
-                                                          AndError:error];
+                                                          AndError:&error];
     //incomplete
     XCTAssertNotNil(TestWeather);
     XCTAssertNil(error);
@@ -69,7 +69,7 @@
     
     NSError* error;
     TestWeather = [TestWeatherManager getActualWeatherWithLocation:[self getCLLocationObject]
-                                                          AndError:error];
+                                                          AndError:&error];
     
     
     //
@@ -91,7 +91,7 @@
     Weather* TestWeatherSecound;
     NSError* error;
     TestWeatherSecound = [TestWeatherManager getActualWeatherWithLocation:[self getCLLocationObject]
-                                                          AndError:error];
+                                                          AndError:&error];
     
     XCTAssertTrue([error.domain isEqualToString:@"OWGettingWeatherError"]);
     XCTAssertEqual(error.code, 2);
