@@ -26,19 +26,24 @@
 -(Weather*)getActualWeatherWithLocation:(CLLocation*)Location AndError:(NSError**)error
 {
     if (openWeatherID == nil) {
-        NSString* userInfoString = [NSString stringWithFormat:@"The OpenWeatherID is not accessible or incorrect - you can check you ID at openweather.com"];
-        NSDictionary* userInfo = [NSDictionary dictionaryWithObject:userInfoString
-                                                             forKey:@"userInfo"];
-        
-        *error = [[NSError alloc] initWithDomain:@"OWGettingWeatherError"
-                                           code:1
-                                       userInfo:userInfo];
+        *error = [self getOWError1];
         return nil;
     }
     
     Weather* MyWeather;
     
     return MyWeather;
+}
+
+-(NSError*)getOWError1
+{
+    NSString* userInfoString = [NSString stringWithFormat:@"The OpenWeatherID is not accessible or incorrect - you can check your ID at openweather.com"];
+    NSDictionary* userInfo = [NSDictionary dictionaryWithObject:userInfoString
+                                                         forKey:@"userInfo"];
+    
+    return [[NSError alloc] initWithDomain:@"OWGettingWeatherError"
+                                        code:1
+                                    userInfo:userInfo];
 }
 
 @end
