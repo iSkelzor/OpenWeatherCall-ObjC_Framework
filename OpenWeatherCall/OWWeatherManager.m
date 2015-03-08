@@ -7,6 +7,7 @@
 //
 
 #import "OWWeatherManager.h"
+#import "OWCityIDManager.h"
 
 @implementation OWWeatherManager
 {
