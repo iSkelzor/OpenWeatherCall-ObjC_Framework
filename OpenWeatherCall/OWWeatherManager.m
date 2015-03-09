@@ -11,6 +11,7 @@
 
 @implementation OWWeatherManager
 {
+    OWCityIDManager* cityIDManager;
     NSString* openWeatherID;
 }
 

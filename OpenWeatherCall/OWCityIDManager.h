@@ -10,4 +10,7 @@
 
 @interface OWCityIDManager : NSObject
 
+//for the last used cityID set location nil
+-(NSNumber*)getCityIDWithLocation:(CLLocation*)location AndError:(NSError**)error;
+
 @end
