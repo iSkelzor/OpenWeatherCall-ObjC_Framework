@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface OWCityIDManager : NSObject
 
-//for the last used cityID set location nil
+-(instancetype)initWithOpenWeatherID:(NSString*)OpenWeatherID;
+
+//for getting the last used cityID set location nil
 -(NSNumber*)getCityIDWithLocation:(CLLocation*)location AndError:(NSError**)error;
 
 @end

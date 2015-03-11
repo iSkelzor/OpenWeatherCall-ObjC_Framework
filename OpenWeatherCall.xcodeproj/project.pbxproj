@@ -17,6 +17,7 @@
 		8256CB071AA99A0B002297D7 /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 8256CB051AA99A0B002297D7 /* Weather.m */; };
 		826A74321AAC61F000EF33F0 /* OWCityIDManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 826A74301AAC61F000EF33F0 /* OWCityIDManager.h */; };
 		826A74331AAC61F000EF33F0 /* OWCityIDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 826A74311AAC61F000EF33F0 /* OWCityIDManager.m */; };
+		82E18AF61AAD9FC4002A25EB /* CityIDMangerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E18AF51AAD9FC4002A25EB /* CityIDMangerTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		8256CB051AA99A0B002297D7 /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
 		826A74301AAC61F000EF33F0 /* OWCityIDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWCityIDManager.h; sourceTree = "<group>"; };
 		826A74311AAC61F000EF33F0 /* OWCityIDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWCityIDManager.m; sourceTree = "<group>"; };
+		82E18AF51AAD9FC4002A25EB /* CityIDMangerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityIDMangerTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 		8256CAF71AA99594002297D7 /* OpenWeatherCallTests */ = {
 			isa = PBXGroup;
 			children = (
+				82E18AF51AAD9FC4002A25EB /* CityIDMangerTest.m */,
 				820486A61AAA18FA0016D54B /* WeatherManagerTest.m */,
 				8256CAFA1AA99594002297D7 /* WeatherTest.m */,
 				8256CAF81AA99594002297D7 /* Supporting Files */,
@@ -245,6 +248,7 @@
 			files = (
 				820486A71AAA18FA0016D54B /* WeatherManagerTest.m in Sources */,
 				8256CAFB1AA99594002297D7 /* WeatherTest.m in Sources */,
+				82E18AF61AAD9FC4002A25EB /* CityIDMangerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
