@@ -40,7 +40,7 @@
     cityID = [TestCityIDManager getCityIDWithLocation:nil AndError:&error];
     
     XCTAssertTrue([error.domain isEqualToString:@"OWGettingWeatherError"]);
-    XCTAssertEqual(error.code, 10);
+    XCTAssertEqual(error.code, 1);
     XCTAssertNil(cityID);
 }
 
@@ -61,9 +61,14 @@
 
 -(void)testStandardGetCityID
 {
+    TestCityIDManager = [[OWCityIDManager alloc]
+                         initWithOpenWeatherID:@"66510fffd7680c052f065d3444fa4759"];
+    
     NSNumber* cityID;
     NSError* error;
     cityID = [TestCityIDManager getCityIDWithLocation:[self getCLLocationObject] AndError:&error];
+    
+    NSLog(@"%@", error);
     
     XCTAssertNotNil(cityID);
     XCTAssertNil(error);
@@ -71,6 +76,9 @@
 
 -(void)testGetCityIDWithoutLocationButOldCityID
 {
+    TestCityIDManager = [[OWCityIDManager alloc]
+                         initWithOpenWeatherID:@"66510fffd7680c052f065d3444fa4759"];
+    
     NSNumber* cityID;
     NSError* error;
     cityID = [TestCityIDManager getCityIDWithLocation:[self getCLLocationObject] AndError:&error];
@@ -87,6 +95,9 @@
 
 -(void)testGetCityIDWithoutLocationAndWithoutOldCityID
 {
+    TestCityIDManager = [[OWCityIDManager alloc]
+                         initWithOpenWeatherID:@"66510fffd7680c052f065d3444fa4759"];
+    
     NSNumber* cityID;
     NSError* error;
     cityID = [TestCityIDManager getCityIDWithLocation:nil AndError:&error];
