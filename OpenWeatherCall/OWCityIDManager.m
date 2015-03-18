@@ -54,7 +54,7 @@
     
     [self getNewCityIDWithLocation:location AndError:error];
     
-    if (error == nil) {
+    if (error) {
         return cityID;
     } else {
         return nil;
@@ -75,11 +75,11 @@
                                                          options:kNilOptions
                                                            error:error];
     
-    if (error == nil) {
+    if (error) {
         if (![self dataAreValidateWithDict:json]) {
             *error = [self getOWError12ForWrongOWCityID];
         } else {
-            cityID = [cityID initWithDouble:
+            cityID = [[NSNumber alloc] initWithDouble:
                       [[[[json objectForKey:@"list"] objectAtIndex:0]
                         objectForKey:@"id"] doubleValue]];
             cityIDLongitude = [cityIDLongitude initWithDouble:location.coordinate.longitude];

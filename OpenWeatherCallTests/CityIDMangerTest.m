@@ -68,8 +68,6 @@
     NSError* error;
     cityID = [TestCityIDManager getCityIDWithLocation:[self getCLLocationObject] AndError:&error];
     
-    NSLog(@"%@", error);
-    
     XCTAssertNotNil(cityID);
     XCTAssertNil(error);
 }
