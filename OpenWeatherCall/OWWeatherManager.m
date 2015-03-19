@@ -12,14 +12,13 @@
 @implementation OWWeatherManager
 {
     OWCityIDManager* cityIDManager;
-    NSString* openWeatherID;
 }
 
 -(instancetype)initWithOpenWeatherID:(NSString*)OpenWeatherID
 {
     self = [super init];
     if (self != nil) {
-        openWeatherID = OpenWeatherID;
+        cityIDManager = [[OWCityIDManager alloc] initWithOpenWeatherID:OpenWeatherID];
     }
     
     return self;
@@ -27,11 +26,6 @@
 
 -(Weather*)getActualWeatherWithLocation:(CLLocation*)Location AndError:(NSError**)error
 {
-    if (openWeatherID == nil) {
-        //*error = [self getOWError1];
-        return nil;
-    }
-    
     Weather* MyWeather;
     
     return MyWeather;
