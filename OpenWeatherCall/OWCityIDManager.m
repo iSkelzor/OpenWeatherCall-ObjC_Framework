@@ -54,7 +54,7 @@
     
     [self getNewCityIDWithLocation:location AndError:error];
     
-    if (error) {
+    if (!*error) {
         return cityID;
     } else {
         return nil;
