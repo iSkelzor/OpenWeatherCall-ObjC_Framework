@@ -113,41 +113,4 @@
                  (Location.coordinate.longitude - [Longitude doubleValue])));
 }
 
-//-----------------------------------------------------------------------------------------------
-#pragma mark NSErrors
-//-----------------------------------------------------------------------------------------------
-
--(NSError*)getOWError1ForNoWeatherID
-{
-    NSString* userInfoString = [NSString stringWithFormat:@"The OpenWeatherID is not accessible or incorrect - you can check your ID at openweather.com"];
-    NSDictionary* userInfo = [NSDictionary dictionaryWithObject:userInfoString
-                                                         forKey:@"userInfo"];
-    
-    return [[NSError alloc] initWithDomain:@"OWGettingWeatherError"
-                                      code:1
-                                  userInfo:userInfo];
-}
-
--(NSError*)getOWError11ForNoCityID
-{
-    NSString* userInfoString = [NSString stringWithFormat:@"There is no old cityID, you have to set a location for get a new one."];
-    NSDictionary* userInfo = [NSDictionary dictionaryWithObject:userInfoString
-                                                         forKey:@"userInfo"];
-    
-    return [[NSError alloc] initWithDomain:@"OWGettingWeatherError"
-                                      code:11
-                                  userInfo:userInfo];
-}
-
--(NSError*)getOWError12ForWrongOWCityID
-{
-    NSString* userInfoString = [NSString stringWithFormat:@"OpenWeather sends a not validate CityID"];
-    NSDictionary* userInfo = [NSDictionary dictionaryWithObject:userInfoString
-                                                         forKey:@"userInfo"];
-    
-    return [[NSError alloc] initWithDomain:@"OWGettingWeatherError"
-                                      code:12
-                                  userInfo:userInfo];
-}
-
 @end
