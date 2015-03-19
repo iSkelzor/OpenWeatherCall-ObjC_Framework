@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Weather.h"
+#import "OWErrors.h"
 
 @interface OWWeatherManager : NSObject
 

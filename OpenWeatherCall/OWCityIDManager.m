@@ -32,13 +32,13 @@
 -(NSNumber*)getCityIDWithLocation:(CLLocation*)location AndError:(NSError**)error
 {
     if (openWeatherID == nil) {
-        *error = [self getOWError1ForNoWeatherID];
+        *error = [OWErrors getOWError1ForNoWeatherID];
         return nil;
     }
     
     if (location == nil) {
         if (cityID == nil) {
-            *error = [self getOWError11ForNoCityID];
+            *error = [OWErrors getOWError11ForNoCityID];
             return nil;
         } else {
             return cityID;
@@ -77,7 +77,7 @@
     
     if (error) {
         if (![self dataAreValidateWithDict:json]) {
-            *error = [self getOWError12ForWrongOWCityID];
+            *error = [OWErrors getOWError12ForWrongOWCityID];
         } else {
             cityID = [[NSNumber alloc] initWithDouble:
                       [[[[json objectForKey:@"list"] objectAtIndex:0]

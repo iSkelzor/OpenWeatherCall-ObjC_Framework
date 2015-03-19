@@ -43,7 +43,7 @@
                                                           AndError:&error];
     
     XCTAssertTrue([error.domain isEqualToString:@"OWGettingWeatherError"]);
-    XCTAssertEqual(error.code, 1);
+    XCTAssertEqual(error.code, 2);
     XCTAssertNil(TestWeather);
 }
 

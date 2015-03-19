@@ -10,9 +10,10 @@
 
 @interface OWErrors : NSObject
 
--(NSError*)getOWError1ForNoWeatherID;
++(NSError*)getOWError1ForNoWeatherID;
++(NSError*)getOWError2ForIncompleteInitialisation;
 
--(NSError*)getOWError11ForNoCityID;
--(NSError*)getOWError12ForWrongOWCityID;
++(NSError*)getOWError11ForNoCityID;
++(NSError*)getOWError12ForWrongOWCityID;
 
 @end

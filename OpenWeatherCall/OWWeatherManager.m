@@ -26,6 +26,11 @@
 
 -(Weather*)getActualWeatherWithLocation:(CLLocation*)Location AndError:(NSError**)error
 {
+    if (cityIDManager == nil) {
+        *error = [OWErrors getOWError2ForIncompleteInitialisation];
+        return nil;
+    }
+    
     Weather* MyWeather;
     
     return MyWeather;
