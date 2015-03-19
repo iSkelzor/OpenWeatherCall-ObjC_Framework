@@ -75,7 +75,7 @@
                                                          options:kNilOptions
                                                            error:error];
     
-    if (error) {
+    if (!*error) {
         if (![self dataAreValidateWithDict:json]) {
             *error = [OWErrors getOWError12ForWrongOWCityID];
         } else {

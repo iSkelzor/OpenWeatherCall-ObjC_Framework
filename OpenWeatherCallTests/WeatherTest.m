@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-#import "Weather.h"
+#import "OWWeather.h"
 
 @interface WeatherTest : XCTestCase
 
@@ -17,7 +17,7 @@
 
 @implementation WeatherTest
 {
-    Weather* TestWeather;
+    OWWeather* TestWeather;
 }
 
 -(void)tearDown
@@ -27,7 +27,7 @@
 
 -(void)testInit
 {
-    TestWeather = [[Weather alloc] init];
+    TestWeather = [[OWWeather alloc] init];
     XCTAssertNotNil(TestWeather);
 }
 
@@ -35,7 +35,7 @@
 {
     CLLocation* TestLocation = [self getCLLocationObject];
     
-    TestWeather = [[Weather alloc] initWithTemperature:10
+    TestWeather = [[OWWeather alloc] initWithTemperature:10
                                            description:@"rain"
                                          unixTimestamp:123456789
                                            AndLocation:TestLocation
@@ -52,7 +52,7 @@
 {
     CLLocation* TestLocation = [self getCLLocationObject];
     
-    TestWeather = [[Weather alloc] initWithTemperature:10
+    TestWeather = [[OWWeather alloc] initWithTemperature:10
                                            description:@"rain"
                                            AndLocation:TestLocation
                    ];
@@ -70,7 +70,7 @@
     NSString* TestDescription = [NSString stringWithFormat:@"DescTest"];
     CLLocation* TestLocation = [self getCLLocationObject];
     
-    TestWeather = [[Weather alloc] initWithTemperature:10
+    TestWeather = [[OWWeather alloc] initWithTemperature:10
                                            description:TestDescription
                                          unixTimestamp:123456789
                                            AndLocation:TestLocation

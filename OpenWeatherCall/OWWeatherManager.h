@@ -7,16 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Weather.h"
+#import "OWWeather.h"
 #import "OWErrors.h"
 
 @interface OWWeatherManager : NSObject
 
 -(instancetype)initWithOpenWeatherID:(NSString*)OpenWeatherID;
 
--(Weather*)getActualWeatherWithLocation:(CLLocation*)Location AndError:(NSError**)error;
+-(OWWeather*)getActualWeatherWithLocation:(CLLocation*)location AndError:(NSError**)error;
 
--(NSArray*)getHistoricWeatherWithLocation:(CLLocation*)Location
+-(NSArray*)getHistoricWeatherWithLocation:(CLLocation*)location
                             Unixstarttime:(long)start
                               Unixendtime:(long)end
                                  AndError:(NSError*)error;

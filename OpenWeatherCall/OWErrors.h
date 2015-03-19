@@ -12,6 +12,8 @@
 
 +(NSError*)getOWError1ForNoWeatherID;
 +(NSError*)getOWError2ForIncompleteInitialisation;
++(NSError*)getOWError3ForToEarlyActualisation;
++(NSError*)getOWError4ForUnsuccessfulDataRead;
 
 +(NSError*)getOWError11ForNoCityID;
 +(NSError*)getOWError12ForWrongOWCityID;

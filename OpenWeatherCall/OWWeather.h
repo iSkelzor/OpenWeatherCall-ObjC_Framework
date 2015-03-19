@@ -10,7 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "OWErrors.h"
 
-@interface Weather : NSObject
+@interface OWWeather : NSObject
 
 -(instancetype)initWithTemperature:(double)temperature
                        description:(NSString*)description

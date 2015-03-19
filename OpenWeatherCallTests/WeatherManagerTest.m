@@ -18,7 +18,7 @@
 @implementation WeatherManagerTest
 
 {
-    Weather* TestWeather;
+    OWWeather* TestWeather;
     OWWeatherManager* TestWeatherManager;
 }
 
@@ -88,7 +88,7 @@
     long unixTime = [[NSDate date] timeIntervalSince1970];
     XCTAssertEqualWithAccuracy(unixTime, TestWeatherManager.LastWeatherCheck, 10);
     
-    Weather* TestWeatherSecound;
+    OWWeather* TestWeatherSecound;
     NSError* error;
     TestWeatherSecound = [TestWeatherManager getActualWeatherWithLocation:[self getCLLocationObject]
                                                           AndError:&error];

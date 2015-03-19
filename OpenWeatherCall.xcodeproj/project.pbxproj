@@ -15,8 +15,8 @@
 		8256CAEE1AA99594002297D7 /* OpenWeatherCall.h in Headers */ = {isa = PBXBuildFile; fileRef = 8256CAED1AA99594002297D7 /* OpenWeatherCall.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8256CAF41AA99594002297D7 /* OpenWeatherCall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8256CAE81AA99594002297D7 /* OpenWeatherCall.framework */; };
 		8256CAFB1AA99594002297D7 /* WeatherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8256CAFA1AA99594002297D7 /* WeatherTest.m */; };
-		8256CB061AA99A0B002297D7 /* Weather.h in Headers */ = {isa = PBXBuildFile; fileRef = 8256CB041AA99A0B002297D7 /* Weather.h */; };
-		8256CB071AA99A0B002297D7 /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 8256CB051AA99A0B002297D7 /* Weather.m */; };
+		8256CB061AA99A0B002297D7 /* OWWeather.h in Headers */ = {isa = PBXBuildFile; fileRef = 8256CB041AA99A0B002297D7 /* OWWeather.h */; };
+		8256CB071AA99A0B002297D7 /* OWWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = 8256CB051AA99A0B002297D7 /* OWWeather.m */; };
 		826A74321AAC61F000EF33F0 /* OWCityIDManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 826A74301AAC61F000EF33F0 /* OWCityIDManager.h */; };
 		826A74331AAC61F000EF33F0 /* OWCityIDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 826A74311AAC61F000EF33F0 /* OWCityIDManager.m */; };
 		82E18AF61AAD9FC4002A25EB /* CityIDMangerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E18AF51AAD9FC4002A25EB /* CityIDMangerTest.m */; };
@@ -44,8 +44,8 @@
 		8256CAF31AA99594002297D7 /* OpenWeatherCallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenWeatherCallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8256CAF91AA99594002297D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8256CAFA1AA99594002297D7 /* WeatherTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherTest.m; sourceTree = "<group>"; };
-		8256CB041AA99A0B002297D7 /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weather.h; sourceTree = "<group>"; };
-		8256CB051AA99A0B002297D7 /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
+		8256CB041AA99A0B002297D7 /* OWWeather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWWeather.h; sourceTree = "<group>"; };
+		8256CB051AA99A0B002297D7 /* OWWeather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWWeather.m; sourceTree = "<group>"; };
 		826A74301AAC61F000EF33F0 /* OWCityIDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWCityIDManager.h; sourceTree = "<group>"; };
 		826A74311AAC61F000EF33F0 /* OWCityIDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWCityIDManager.m; sourceTree = "<group>"; };
 		82E18AF51AAD9FC4002A25EB /* CityIDMangerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityIDMangerTest.m; sourceTree = "<group>"; };
@@ -92,8 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				8256CAED1AA99594002297D7 /* OpenWeatherCall.h */,
-				8256CB041AA99A0B002297D7 /* Weather.h */,
-				8256CB051AA99A0B002297D7 /* Weather.m */,
+				8256CB041AA99A0B002297D7 /* OWWeather.h */,
+				8256CB051AA99A0B002297D7 /* OWWeather.m */,
 				820486921AAA18A40016D54B /* OWWeatherManager.h */,
 				820486931AAA18A40016D54B /* OWWeatherManager.m */,
 				826A74301AAC61F000EF33F0 /* OWCityIDManager.h */,
@@ -143,7 +143,7 @@
 				820486941AAA18A40016D54B /* OWWeatherManager.h in Headers */,
 				8256CAEE1AA99594002297D7 /* OpenWeatherCall.h in Headers */,
 				826A74321AAC61F000EF33F0 /* OWCityIDManager.h in Headers */,
-				8256CB061AA99A0B002297D7 /* Weather.h in Headers */,
+				8256CB061AA99A0B002297D7 /* OWWeather.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,7 +246,7 @@
 				820A5EFE1ABB063A00533E67 /* OWErrors.m in Sources */,
 				820486951AAA18A40016D54B /* OWWeatherManager.m in Sources */,
 				826A74331AAC61F000EF33F0 /* OWCityIDManager.m in Sources */,
-				8256CB071AA99A0B002297D7 /* Weather.m in Sources */,
+				8256CB071AA99A0B002297D7 /* OWWeather.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

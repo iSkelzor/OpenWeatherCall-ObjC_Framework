@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Andreas Braatz. All rights reserved.
 //
 
-#import "Weather.h"
+#import "OWWeather.h"
 
-@implementation Weather
+@implementation OWWeather
 
 -(instancetype)initWithTemperature:(double)temperature
                        description:(NSString*)description
