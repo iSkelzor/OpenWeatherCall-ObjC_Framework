@@ -12,8 +12,9 @@
 @implementation OWWeatherManager
 {
     OWCityIDManager* cityIDManager;
-    long lastWeatherCheck;
     NSString* openWeatherID;
+    
+    OWWeather* lastWeather;
 }
 
 -(instancetype)initWithOpenWeatherID:(NSString*)OpenWeatherID
@@ -36,9 +37,9 @@
     
     long time = [[NSDate date] timeIntervalSince1970];
     
-    if ((time - lastWeatherCheck) < 600) {
+    if ((time - _LastWeatherCheck) < 600) {
         *error = [OWErrors getOWError3ForToEarlyActualisation];
-        return nil;
+        return lastWeather;
     }
     
     NSNumber* cityID = [cityIDManager getCityIDWithLocation:location AndError:error];
@@ -55,14 +56,15 @@
                                                            error:error];
     
     if (!*error) {
-        OWWeather* MyWeather = [self getActualWeatherDataFromDict:json
-                                                   WithLocation:location
-                                                       AndError:error];
-        if (!*error) {
-            return MyWeather;
-        } else {
-            return nil;
+        OWWeather* newWeather;
+        newWeather = [self getActualWeatherDataFromDict:json
+                                            WithLocation:location
+                                                AndError:error];
+        if ((newWeather != nil) && (!*error)) {
+            _LastWeatherCheck = time;
+            lastWeather = newWeather;
         }
+        return lastWeather;
     } else {
         return nil;
     }

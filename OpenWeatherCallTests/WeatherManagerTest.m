@@ -82,8 +82,9 @@
     TestWeatherManager = [[OWWeatherManager alloc]
                           initWithOpenWeatherID:@"66510fffd7680c052f065d3444fa4759"];
     
+    NSError* error2;
     TestWeather = [TestWeatherManager getActualWeatherWithLocation:[self getCLLocationObject]
-                                                          AndError:nil];
+                                                          AndError:&error2];
     
     long unixTime = [[NSDate date] timeIntervalSince1970];
     XCTAssertEqualWithAccuracy(unixTime, TestWeatherManager.LastWeatherCheck, 10);
@@ -94,7 +95,7 @@
                                                           AndError:&error];
     
     XCTAssertTrue([error.domain isEqualToString:@"OWGettingWeatherError"]);
-    XCTAssertEqual(error.code, 2);
+    XCTAssertEqual(error.code, 3);
     XCTAssertEqualObjects(TestWeather, TestWeatherSecound);
 }
 
