@@ -16,6 +16,10 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+//--------------------------------------------------------------
+//Before testing - eventually set an OpenWeatherID! (see bottom)
+//--------------------------------------------------------------
+
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 #import "OWCityIDManager.h"
@@ -120,7 +124,7 @@
 
 -(NSString*)getExampleOpenWeatherID
 {
-    return @"66510fffd7680c052f065d3444fa4759";
+    return @"";
 }
 
 -(CLLocation*)getExampleCLLocationObject
