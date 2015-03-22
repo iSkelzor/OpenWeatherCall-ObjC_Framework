@@ -19,6 +19,8 @@
 		8256CB071AA99A0B002297D7 /* OWWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = 8256CB051AA99A0B002297D7 /* OWWeather.m */; };
 		826A74321AAC61F000EF33F0 /* OWCityIDManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 826A74301AAC61F000EF33F0 /* OWCityIDManager.h */; };
 		826A74331AAC61F000EF33F0 /* OWCityIDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 826A74311AAC61F000EF33F0 /* OWCityIDManager.m */; };
+		8279E6AE1ABF36F200476CEB /* LICENSE.md in Sources */ = {isa = PBXBuildFile; fileRef = 8279E6AC1ABF36F200476CEB /* LICENSE.md */; };
+		8279E6AF1ABF36F200476CEB /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8279E6AD1ABF36F200476CEB /* README.md */; };
 		82E18AF61AAD9FC4002A25EB /* CityIDMangerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E18AF51AAD9FC4002A25EB /* CityIDMangerTest.m */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,8 @@
 		8256CB051AA99A0B002297D7 /* OWWeather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWWeather.m; sourceTree = "<group>"; };
 		826A74301AAC61F000EF33F0 /* OWCityIDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWCityIDManager.h; sourceTree = "<group>"; };
 		826A74311AAC61F000EF33F0 /* OWCityIDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWCityIDManager.m; sourceTree = "<group>"; };
+		8279E6AC1ABF36F200476CEB /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		8279E6AD1ABF36F200476CEB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		82E18AF51AAD9FC4002A25EB /* CityIDMangerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityIDMangerTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +112,8 @@
 		8256CAEB1AA99594002297D7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8279E6AC1ABF36F200476CEB /* LICENSE.md */,
+				8279E6AD1ABF36F200476CEB /* README.md */,
 				8256CAEC1AA99594002297D7 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -243,6 +249,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8279E6AF1ABF36F200476CEB /* README.md in Sources */,
+				8279E6AE1ABF36F200476CEB /* LICENSE.md in Sources */,
 				820A5EFE1ABB063A00533E67 /* OWErrors.m in Sources */,
 				820486951AAA18A40016D54B /* OWWeatherManager.m in Sources */,
 				826A74331AAC61F000EF33F0 /* OWCityIDManager.m in Sources */,
